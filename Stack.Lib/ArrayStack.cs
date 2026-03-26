@@ -30,6 +30,11 @@ public class ArrayStack<T> : IStack<T>
 
     public T Pop()
     {
+        if (_count == 0)
+        {
+            throw new InvalidOperationException();
+        }
+
         _count--;
         return _items[_count];
     }

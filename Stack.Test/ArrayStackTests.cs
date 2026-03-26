@@ -92,5 +92,15 @@ namespace Stack.Test
             // Assert
             Assert.Equal(PUSHEDVALUE, value);
         }
+
+        [Fact]
+        public void Pop_WhenStackIsEmpty_ShouldThrowException()
+        {
+            // Arrange
+            var stack = new ArrayStack<int>(0);
+
+            // Act & Assert
+            Assert.Throws<InvalidOperationException>(() => stack.Pop());
+        }
     }
 }
