@@ -77,5 +77,20 @@ namespace Stack.Test
             // Assert
             Assert.Equal(1, stack.Count);
         }
+
+        [Fact]
+        public void Pop_AfterPush_ReturnsPushedValue()
+        {
+            // Arrange
+            const int PUSHEDVALUE = 7;
+            var stack = new ArrayStack<int>(5);
+
+            // Act
+            stack.Push(PUSHEDVALUE);
+            var value = stack.Pop();
+
+            // Assert
+            Assert.Equal(PUSHEDVALUE, value);
+        }
     }
 }

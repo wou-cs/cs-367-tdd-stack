@@ -24,12 +24,14 @@ public class ArrayStack<T> : IStack<T>
         {
             throw new InvalidOperationException();
         }
+        _items[_count] = item;
         _count++;
     }
 
     public T Pop()
     {
-        throw new NotImplementedException();
+        _count--;
+        return _items[_count];
     }
 
     public T Peek()
