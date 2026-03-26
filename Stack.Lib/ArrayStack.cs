@@ -12,7 +12,7 @@ public class ArrayStack<T> : IStack<T>
 
     public bool IsEmpty => _count == 0;
 
-    public bool IsFull => throw new NotImplementedException();
+    public bool IsFull => _count == _items.Length;
 
     public int Count => throw new NotImplementedException();
 

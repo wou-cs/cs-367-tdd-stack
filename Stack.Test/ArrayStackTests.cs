@@ -27,5 +27,18 @@ namespace Stack.Test
             // Act & Assert
             Assert.Throws<InvalidOperationException>(() => stack.Push(5));
         }
+
+        [Fact]
+        public void IsFull_ForNewZeroStack_ShouldReturnTrue()
+        {
+            // Arrange
+            var stack = new ArrayStack<int>(0);
+
+            // Act
+            var isFull = stack.IsFull;
+
+            // Assert
+            Assert.True(isFull);
+        }
     }
 }
