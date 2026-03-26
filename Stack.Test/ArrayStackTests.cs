@@ -40,5 +40,29 @@ namespace Stack.Test
             // Assert
             Assert.True(isFull);
         }
+
+        [Fact]
+        public void Count_ForNewStack_ShouldBeZero()
+        {
+            // Arrange
+            var stack = new ArrayStack<int>(5);
+
+            // Act
+            var count = stack.Count;
+
+            // Assert
+            Assert.Equal(0, count);
+        }
+
+        [Fact]
+        public void Capacity_ForNewStack_ShouldEqualAllocation()
+        {
+            // Arrange
+            const int STACKSIZE = 42;
+            var stack = new ArrayStack<int>(STACKSIZE);
+
+            // Act & Assert
+            Assert.Equal(STACKSIZE, stack.Capacity);
+        }
     }
 }

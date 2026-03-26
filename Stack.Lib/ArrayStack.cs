@@ -14,9 +14,9 @@ public class ArrayStack<T> : IStack<T>
 
     public bool IsFull => _count == _items.Length;
 
-    public int Count => throw new NotImplementedException();
+    public int Count => _count;
 
-    public int Capacity => throw new NotImplementedException();
+    public int Capacity => _items.Length;
 
     public void Push(T item)
     {
