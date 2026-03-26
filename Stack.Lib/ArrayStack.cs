@@ -3,7 +3,7 @@ namespace Stack.Lib;
 public class ArrayStack<T> : IStack<T>
 {
     private T[] _items;
-    private readonly int _count = 0;
+    private int _count = 0;
 
     public ArrayStack(int capacity)
     {
@@ -24,6 +24,7 @@ public class ArrayStack<T> : IStack<T>
         {
             throw new InvalidOperationException();
         }
+        _count++;
     }
 
     public T Pop()

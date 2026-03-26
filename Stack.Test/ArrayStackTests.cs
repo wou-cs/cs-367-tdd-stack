@@ -64,5 +64,18 @@ namespace Stack.Test
             // Act & Assert
             Assert.Equal(STACKSIZE, stack.Capacity);
         }
+
+        [Fact]
+        public void Count_AfterFirstPush_ShouldBeOne()
+        {
+            // Arrange
+            var stack = new ArrayStack<int>(5);
+
+            // Act
+            stack.Push(7);
+
+            // Assert
+            Assert.Equal(1, stack.Count);
+        }
     }
 }
