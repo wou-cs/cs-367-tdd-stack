@@ -1,0 +1,38 @@
+namespace Stack.Lib;
+
+public class ArrayStack<T> : IStack<T>
+{
+    private T[] _items;
+    private readonly int _count = 0;
+
+    public ArrayStack(int capacity)
+    {
+        _items = new T[capacity];
+    }
+
+    public bool IsEmpty => _count == 0;
+
+    public bool IsFull => throw new NotImplementedException();
+
+    public int Count => throw new NotImplementedException();
+
+    public int Capacity => throw new NotImplementedException();
+
+    public void Push(T item)
+    {
+        if (_count == _items.Length)
+        {
+            throw new InvalidOperationException();
+        }
+    }
+
+    public T Pop()
+    {
+        throw new NotImplementedException();
+    }
+
+    public T Peek()
+    {
+        throw new NotImplementedException();
+    }
+}
