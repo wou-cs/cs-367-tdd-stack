@@ -6,7 +6,7 @@ namespace Stack.Test
     public class ArrayStackTests
     {
         [Fact]
-        public void IsEmpty_ShouldReturnTrue_ForNewStack()
+        public void IsEmpty_ForNewStack_ShouldReturnTrue()
         {
             // Arrange
             var stack = new ArrayStack<int>(5);
@@ -19,7 +19,7 @@ namespace Stack.Test
         }
 
         [Fact]
-        public void Push_ShouldThrowException_WhenStackIsFull()
+        public void Push_WhenStackIsFull_ShouldThrowException()
         {
             // Arrange
             var stack = new ArrayStack<int>(0);
